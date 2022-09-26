@@ -27,11 +27,17 @@ Various representation methods were then used to transform the data, namely: bag
 
 Word frequency diagrams, bigram and trigram network diagrams, and word clouds were used as exploratory data analysis visualisations to gain insight into the data.
 
-https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-notes/blob/main/Images/CombinedWC.png
-https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-notes/blob/main/Images/FullWordNet.png
+![Word-Frequency-Diagram](https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-notes/blob/main/Images/FullWordFreq.png) Word Frequency Diagram
+![Bigram-Network](https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-notes/blob/main/Images/FullWordNet.png) Bigram Network Diagram
+![Trigram-Network](https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-notes/blob/main/Images/FullTriNet.png) Trigram Network Diagram
 
+NB: The bigram and trigram nodes that connect to themselves happen because the stopwords linking those word were removed during cleaning, hence, multiple instances of words occurred together enough times to be noticed by the network co-occurrence algorithms.
+![Word-Cloud](https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-notes/blob/main/Images/CombinedWC.png) Word Cloud
 
-•	Following the above processes, the main algorithms researched into were applied to the data. LDA, TextRank, RAKE, YAKE, and KeyBERT were all ran on the dataset to achieve the goal of topic extraction – and to evaluate their efficacy at accomplishing the task.
+## Methodology 
+
+Following the above processes, the main algorithms researched into were applied to the data. 
+<a href= "https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=https://githubhelp.com"> Latent Dirichlet Allocation</a>, <a href= "https://aclanthology.org/W04-3252.pdf">TextRank</a>, <a href= "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.657.8134&rep=rep1&type=pdf">RAKE</a>, <a href= "https://www.sciencedirect.com/science/article/pii/S0020025519308588?casa_token=MRjzRkVknWkAAAAA:Z2-1WE-6UnsNbS-dYJjxeq76pfdjk61l41jXpbDOOhNykz5kKFdFv6IEK4l846MUjTL_oHj4L4k">YAKE</a>, and <a href= "https://maartengr. github. io/KeyBERT/index. html"> KeyBERT</a> were all applied to the dataset to achieve the goal of topic extraction – and to evaluate their efficacy at accomplishing the task.
 
 •	The implementation revealed that incorporating transformer pre-trained models (KeyBERT) to carry out topic extraction tasks would provide more benefit to the task than completely unsupervised approaches. The semantic and contextual knowledge of language that is retained by such models makes their impact hard to ignore. 
 
@@ -40,6 +46,3 @@ https://github.com/edudzi-mamattah/nlp-automatic-topic-extraction-from-lecture-n
 •	From the implementation, it was observed that LDA’s method generates a sparse choice of topics from the corpus, yet it fails to capture important words within text. TextRank outputs the list of keywords, but some keywords were surprising as they did not provide any idea as to the topic at hand. 
 
 
-
-
-![data-split-image](https://github.com/edudzi-mamattah/edgeimpulse-audio-classification/blob/main/images/data-split-image.png)
