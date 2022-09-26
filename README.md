@@ -10,7 +10,8 @@ A project conducted to research different state-of-the-art methods of parsing te
 
 ### Description
 
-Data used consisted of the leture notes (in pdf presentation formats) of 6 modules (52 lecture notes in total) from <a href= "brunel.ac.uk"> Brunel University </a>. Please note that this data is not included in the repository as I am not allowed to share it publicly.
+Data used consisted of the leture notes (in pdf presentation formats) of 6 modules (52 lecture notes in total) from <a href= "brunel.ac.uk"> Brunel University </a>.
+**Please note that this data is not included in the repository as I am not allowed to share it publicly.**
 
 ### Cleaning & Processing
 
@@ -48,7 +49,7 @@ From the implementation, it was observed that LDA’s method generates a sparse 
 
 TextRank outputs a list of keywords it perceives to be keywords pertaining to the input it was given. Most of the words it prints out are singular words, but it does print out certain n-gram words intermittently.  Some keywords were surprising as they did not provide any idea as to the topic at hand; and the kekywords generated were not assigned any ranks so it was hard to determine what the algorithm though the important keywords were. 
 
-Graph-based ranking algorithms (YAKE and RAKE) also have a substantial performance but lacking that context-specific knowledge means that they are sometimes difficult to interpret and simply have too many options for their output. This problem is especially true for RAKE. YAKE limits itself to 20 possible keyphrases and ranks them in order of scending probability. Comparing the outputs of RAKE and YAKE for the same CS5707 lecture reveals that YAKE’s output tends to reveal more about the text than that of RAKE by being slightly more generic.
+Graph-based ranking algorithms (YAKE and RAKE) also have a substantial performance but lacking that context-specific knowledge means that they are sometimes difficult to interpret and simply have too many options for their output. This problem is especially true for RAKE. YAKE limits itself to 20 possible keyphrases and ranks them in order of scending probability. Comparing the outputs of RAKE and YAKE for the same lecture reveals that YAKE’s output tends to reveal more about the text than that of RAKE by being slightly more generic.
 
 
 KeyBERT only generates 5 possible keywords per document (this feature is hardcoded into the original implementation and cannot be configured), and treats each keyword it generates as an independent affair when it prints the probability score next to the word (ence those scores do not add up to 1). In most cases, it only outputs keywords that it recognises are a prominent feature of the lecture in question. Only for certain lecture notes does its keyword/keyphrase turn out to be the topic of the lecture; regardless, its results have been the closest to the actual topics in most cases. It also has a setting which allows one to input the number of n-grams, so that it finds the topics that fit that n-gram pattern. This exposes a drawback of its default mode, which prints one-word keywords for every document without any kind of discretion.
